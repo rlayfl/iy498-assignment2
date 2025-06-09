@@ -11,6 +11,7 @@ DROP TABLE IF EXISTS Equipment;
 DROP TABLE IF EXISTS Clients;
 
 -- 1. Create Tables
+
 CREATE TABLE Clients (
     ClientId VARCHAR(10) PRIMARY KEY,
     Name VARCHAR(100),
