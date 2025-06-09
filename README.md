@@ -5,6 +5,7 @@ CREATE DATABASE <YourDBName>;
 USE <YourDBName>;
 
 -- Drop existing tables if they exist
+
 DROP TABLE IF EXISTS Equipment_Purchased;
 DROP TABLE IF EXISTS Orders;
 DROP TABLE IF EXISTS Equipment;
@@ -42,6 +43,7 @@ CREATE TABLE Equipment_Purchased (
 );
 
 -- Insert data into Clients
+
 INSERT INTO Clients (ClientId, Name, Address, DateOfBirth) VALUES 
 ('C001', 'Emily Thompson', '12 High Street, Cambridge', '1995-03-22'),
 ('C002', 'Jack Wilson', '88 London Road, Manchester', '1987-07-11'),
@@ -53,6 +55,7 @@ INSERT INTO Clients (ClientId, Name, Address, DateOfBirth) VALUES
 ('C008', 'George Harris', '67 Victoria Street, Liverpool', '1981-10-02');
 
 -- Insert data into Equipment
+
 INSERT INTO Equipment (EquipCode, EquipDescription, Price) VALUES 
 ('E001', 'Treadmill - Compact UK Model', 725.00),
 ('E002', 'Spin Bike - Home Edition', 499.99),
@@ -64,6 +67,7 @@ INSERT INTO Equipment (EquipCode, EquipDescription, Price) VALUES
 ('E008', 'Boxing Bag - Wall Mount', 220.00);
 
 -- Insert data into Orders
+
 INSERT INTO Orders (OrderNo, OrderDate, ClientId) VALUES 
 ('O001', '2025-01-15', 'C001'),
 ('O002', '2025-02-03', 'C002'),
@@ -76,6 +80,7 @@ INSERT INTO Orders (OrderNo, OrderDate, ClientId) VALUES
 ('O009', '2025-06-02', 'C008');
 
 -- Insert data into Equipment_Purchased
+
 INSERT INTO Equipment_Purchased (EquipCode, OrderNo, Quantity) VALUES 
 ('E001', 'O001', 1),
 ('E005', 'O001', 2),
