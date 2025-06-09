@@ -8,10 +8,10 @@ USE <YourDBName>;
 DROP TABLE IF EXISTS Equipment_Purchased;
 DROP TABLE IF EXISTS Orders;
 DROP TABLE IF EXISTS Equipment;
-DROP TABLE IF EXISTS Client;
+DROP TABLE IF EXISTS Clients;
 
 -- 1. Create Tables
-CREATE TABLE Client (
+CREATE TABLE Clients (
     ClientId VARCHAR(10) PRIMARY KEY,
     Name VARCHAR(100),
     Address VARCHAR(255),
@@ -28,7 +28,7 @@ CREATE TABLE Orders (
     OrderNo VARCHAR(10) PRIMARY KEY,
     OrderDate DATE,
     ClientId VARCHAR(10),
-    FOREIGN KEY (ClientId) REFERENCES Client(ClientId)
+    FOREIGN KEY (ClientId) REFERENCES Clients(ClientId)
 );
 
 CREATE TABLE Equipment_Purchased (
@@ -40,8 +40,8 @@ CREATE TABLE Equipment_Purchased (
     FOREIGN KEY (OrderNo) REFERENCES Orders(OrderNo)
 );
 
--- Insert data into Client
-INSERT INTO Client (ClientId, Name, Address, DateOfBirth) VALUES 
+-- Insert data into Clients
+INSERT INTO Clients (ClientId, Name, Address, DateOfBirth) VALUES 
 ('C001', 'Emily Thompson', '12 High Street, Cambridge', '1995-03-22'),
 ('C002', 'Jack Wilson', '88 London Road, Manchester', '1987-07-11'),
 ('C003', 'Sophie Patel', '7 Queen’s Avenue, Birmingham', '1992-01-09'),
